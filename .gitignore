@@ -1,4 +1,4 @@
-src/purchase-counts.csv
+purchase-counts.csv
 .env
 node_modules
 cache
