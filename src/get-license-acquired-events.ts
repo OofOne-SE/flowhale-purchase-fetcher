@@ -1,14 +1,14 @@
 import { Log } from 'ethers';
 import { ethers } from 'hardhat';
-import abi from './Flowhale-abi';
+import abi from './Flowhale-abi-v2';
 
 async function main() {
   const provider = ethers.provider;
 
-  const contractAddress = '0x2c14c16c2f85d3805e8426ba5e567d318562070d';
+  const contractAddress = '0x675293A70C418c97E5455A5d9C498599c5663404';
   
-  const fromBlock = 307274952;
-  const toBlock = 326480863;
+  const fromBlock = 352608361;
+  const toBlock = 352608363;
 
   const eventName = 'LicenseAcquired';
 
@@ -29,7 +29,6 @@ async function main() {
     logs = [...logs, ...newLogs]
     console.log("from to", currentBlock, currentBlock + chunkSize)
   }
-  
 
   const decodedLogs = logs.map((log) => {
     try {
